@@ -49,7 +49,7 @@ const AiInterviewPage = () => {
             setLoading(true);
             const token = await user.getIdToken();
 
-            const response = await axios.get(`/api/auth/interview/${id}`, {
+            const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/auth/interview/${id}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
