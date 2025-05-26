@@ -224,7 +224,7 @@ const InterviewDetail = React.memo(({ id }) => {
             }
 
             const response = await axios.get(
-                `http://localhost:8080/api/auth/interview/${id}`,
+                `${import.meta.env.VITE_BACKEND_URL}/api/auth/interview/${id}`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -273,7 +273,7 @@ const InterviewDetail = React.memo(({ id }) => {
             setResetting(true);
             const token = await auth.currentUser?.getIdToken();
             await axios.post(
-                `http://localhost:8080/api/auth/interview/${id}/reset`,
+                `${import.meta.env.VITE_BACKEND_URL}/api/auth/interview/${id}/reset`,
                 {},
                 {
                     headers: {
@@ -399,7 +399,7 @@ const InterviewList = React.memo(() => {
                 return;
             }
             const response = await axios.get(
-                "http://localhost:8080/api/auth/interview",
+                `${import.meta.env.VITE_BACKEND_URL}/api/auth/interview`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
