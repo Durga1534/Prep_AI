@@ -105,7 +105,7 @@ const AiInterviewPage = () => {
             const token = await auth.currentUser?.getIdToken();
             console.log("Starting question generation for interview ID:", id);
 
-            const interviewRes = await axios.get(`/api/auth/interview/${id}`, {
+            const interviewRes = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/auth/interview/${id}`, {
                 headers: { 'Authorization': `Bearer ${token}` }
             });
             console.log("Interview details for question generation:", interviewRes.data);
@@ -128,7 +128,7 @@ const AiInterviewPage = () => {
 
             try {
                 const response = await axios.post(
-                    `/api/auth/interview/${id}/generate-questions`,
+                    `${import.meta.env.VITE_BACKEND_URL}/api/auth/interview/${id}/generate-questions`,
                     {
                         role: interviewRes.data.role,
                         skills: interviewRes.data.skills,
@@ -184,7 +184,7 @@ const AiInterviewPage = () => {
             }
 
             const response = await axios.post(
-                `/api/auth/interview/${id}/answers`,
+                `${import.meta.env.VITE_BACKEND_URL}/api/auth/interview/${id}/answers`,
                 {
                     answer,
                     questionIndex: currentQuestionIndex
