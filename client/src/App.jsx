@@ -14,7 +14,7 @@ import Login from "./pages/Login.jsx";
 import 'react-toastify/dist/ReactToastify.css';
 
 
-axios.defaults.baseURL = 'http://localhost:8080';
+axios.defaults.baseURL = 'https://prep-ai-wku0.onrender.com';
 axios.defaults.withCredentials = true;
 
 const App = () => {
