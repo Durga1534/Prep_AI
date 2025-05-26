@@ -6,7 +6,7 @@ import { Toaster, toast } from 'react-hot-toast';
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-    baseURL: 'http://localhost:8080',
+    baseURL: 'https://prep-ai-wku0.onrender.com',
     withCredentials: true
 });
 
@@ -34,7 +34,7 @@ const Signup = () => {
                 const token = await user.getIdToken();
 
                 // Register user in backend
-                await axiosInstance.post('/api/auth/signup',
+                await axiosInstance.post(`${import.meta.env.VITE_BACKEND_URL}/api/auth/signup`,
                     { email, name },
                     {
                         headers: {
