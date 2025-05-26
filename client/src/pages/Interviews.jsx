@@ -26,7 +26,7 @@ const Interviews = () => {
                 return;
             }
             // Use controller endpoint
-            const response = await axios.get("/api/auth/interview", {
+            const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/auth/interview`, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             setInterviews(response.data);
@@ -42,7 +42,7 @@ const Interviews = () => {
         try {
             const token = await auth.currentUser?.getIdToken();
             // Use controller endpoint for reset
-            await axios.post(`/api/auth/interview/${interviewId}/reset`, {}, {
+            await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/auth/interview/${interviewId}/reset`, {}, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             toast.success('Interview reset successfully');
@@ -61,7 +61,7 @@ const Interviews = () => {
                 return;
             }
             // Use controller endpoint for creating interview
-            await axios.post("/api/auth/interview", {
+            await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/auth/interview`, {
                 ...interviewData,
                 experience: typeof interviewData.experience === 'string' ?
                     (interviewData.experience.includes('-') ?
