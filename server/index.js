@@ -7,7 +7,7 @@ const app = express();
 
 
 app.use(cors({
-    origin: "https://prep-ai-lime.vercel.app/",
+    origin: "https://prep-pk9wwv444-durgaprasads-projects-e0a9901b.vercel.app",
     credentials: true,
 }));
 
