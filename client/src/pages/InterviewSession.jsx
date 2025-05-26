@@ -32,7 +32,7 @@ const InterviewSession = () => {
                 return;
             }
 
-            const response = await axios.get(`/api/auth/interview/${id}`, {
+            const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/auth/interview/${id}`, {
                 headers: { Authorization: `Bearer ${token}` }
             });
 
@@ -71,7 +71,7 @@ const InterviewSession = () => {
 
         try {
             const token = await auth.currentUser?.getIdToken();
-            const response = await axios.post(`/api/auth/interview/${id}/answers`, {
+            const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/auth/interview/${id}/answers`, {
                 questionIndex: currentQuestionIndex,
                 answer: answer
             }, {
