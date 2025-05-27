@@ -1,4 +1,4 @@
-const admin = require('./firebaseAdmin'); 
+const admin = require("../firebase/firebaseAdmin"); 
 
 const db = admin.firestore();
 const auth = admin.auth();
