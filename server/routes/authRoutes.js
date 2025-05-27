@@ -5,6 +5,12 @@ const verifyToken = require("../middleware/authMiddleware");
 const interviewController = require("../controllers/interviewController");
 require('dotenv').config();
 
+// Add debug logging for environment variables
+console.log('Environment Variables Check:');
+console.log('FIREBASE_PROJECT_ID:', process.env.FIREBASE_PROJECT_ID ? 'Set' : 'Missing');
+console.log('FIREBASE_CLIENT_EMAIL:', process.env.FIREBASE_CLIENT_EMAIL ? 'Set' : 'Missing');
+console.log('FIREBASE_PRIVATE_KEY exists:', !!process.env.FIREBASE_PRIVATE_KEY);
+
 // Middleware to validate interview ownership and access
 const validateInterviewAccess = async (req, res, next) => {
     try {
@@ -36,6 +42,33 @@ const validateInterviewAccess = async (req, res, next) => {
         res.status(500).json({ error: err.message });
     }
 };
+
+// Test Firebase connection route
+router.get("/test-firebase", async (req, res) => {
+    try {
+        console.log('Testing Firebase connection...');
+        
+        const db = admin.firestore();
+        
+        // Try to list collections instead of querying a specific one
+        const collections = await db.listCollections();
+        const collectionNames = collections.map(col => col.id);
+        
+        res.json({
+            success: true,
+            message: 'Firebase connected successfully',
+            collections: collectionNames
+        });
+        
+    } catch (error) {
+        console.error('Firebase test error:', error);
+        res.status(500).json({
+            success: false,
+            error: error.message,
+            code: error.code
+        });
+    }
+});
 
 router.post("/signup", async (req, res) => {
     try {
@@ -116,12 +149,42 @@ router.post("/interview", verifyToken, async (req, res) => {
     }
 });
 
-router.get("/interview", verifyToken, async (req, res) => {
+// Updated interview route with detailed logging
+router.get("/interview", async (req, res) => {
+    console.log('=== Interview Route Called ===');
+    console.log('Headers:', req.headers);
+    
     try {
-        const userId = req.user.uid;
-        const interviewsRef = admin.firestore().collection("interviews");
-        const snapshot = await interviewsRef.where("userId", "==", userId).get();
+        // Check if Firebase is initialized
+        console.log('Firebase apps:', admin.apps.length);
+        
+        // Check for authorization token
+        const token = req.headers.authorization?.split('Bearer ')[1];
+        
+        if (!token) {
+            console.log('No token provided');
+            return res.status(401).json({ error: 'No token provided' });
+        }
 
+        // Verify the token
+        let decodedToken;
+        try {
+            decodedToken = await admin.auth().verifyIdToken(token);
+            console.log('Token verified for user:', decodedToken.uid);
+        } catch (tokenError) {
+            console.error('Token verification failed:', tokenError);
+            return res.status(401).json({ error: 'Invalid token' });
+        }
+
+        const userId = decodedToken.uid;
+        
+        const db = admin.firestore();
+        console.log('Firestore instance created');
+        
+        const interviewsRef = db.collection("interviews");
+        const snapshot = await interviewsRef.where("userId", "==", userId).get();
+        console.log('Firestore query successful, docs:', snapshot.size);
+        
         const interviews = [];
         snapshot.forEach(doc => {
             interviews.push({
@@ -129,10 +192,22 @@ router.get("/interview", verifyToken, async (req, res) => {
                 ...doc.data()
             });
         });
+        
+        console.log('Returning interviews:', interviews.length);
         res.json(interviews);
-    } catch (err) {
-        console.error("Error fetching interviews:", err);
-        res.status(500).json({ error: err.message });
+        
+    } catch (error) {
+        console.error('=== DETAILED ERROR ===');
+        console.error('Error message:', error.message);
+        console.error('Error code:', error.code);
+        console.error('Full error:', error);
+        console.error('====================');
+        
+        res.status(500).json({ 
+            error: 'Failed to fetch interviews',
+            details: error.message,
+            code: error.code
+        });
     }
 });
 
@@ -175,6 +250,7 @@ router.post("/interview/:id/progress", verifyToken, validateInterviewAccess, asy
         res.status(500).json({ error: "Failed to save progress" });
     }
 });
+
 //Complete interview route
 router.post("/interview/:id/complete", verifyToken, validateInterviewAccess, async (req, res) => {
     try {
