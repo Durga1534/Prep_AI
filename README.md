@@ -67,7 +67,6 @@ Prep-AI empowers users to:
 * 🧠 Role-based AI question generation
 * 📑 Coding editor and syntax highlighting
 * 🧾 Save & revisit past interviews
-* 📢 Voice interface with Speechly
 * ⚙️ Real-time toast and notifications
 
 ---
