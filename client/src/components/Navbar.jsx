@@ -166,13 +166,6 @@ const Navbar = () => {
                     )}
                     {user ? (
                         <>
-                            <Link
-                                to="/settings"
-                                className="block px-2 py-1 hover:bg-teal-500"
-                                onClick={toggle}
-                            >
-                                Settings
-                            </Link>
                             <button
                                 onClick={() => {
                                     handleSignOut();
