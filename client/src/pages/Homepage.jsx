@@ -77,7 +77,7 @@ const Home = () => {
                         controls
                         poster="https://drive.google.com/file/d/1_7v0fc2c1iq1szdRYXJ-QMXXlC-LDF2_/view?usp=sharing/640x360?text=PrepAI+Demo"
                     >
-                        <source src="https://drive.google.com/file/d/1_7v0fc2c1iq1szdRYXJ-QMXXlC-LDF2_/view?usp=sharing" type="video/mp4" />
+                        <source src="https://drive.google.com/uc?export=download&id=1_7v0fc2c1iq1szdRYXJ-QMXXlC-LDF2_" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
                 </div>
