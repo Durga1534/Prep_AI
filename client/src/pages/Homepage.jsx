@@ -75,7 +75,7 @@ const Home = () => {
                     <video
                         className="rounded-lg shadow-lg w-full max-w-xl"
                         controls
-                        poster="https://via.placeholder.com/640x360?text=PrepAI+Demo"
+                        poster="https://drive.google.com/file/d/1_7v0fc2c1iq1szdRYXJ-QMXXlC-LDF2_/view?usp=sharing/640x360?text=PrepAI+Demo"
                     >
                         <source src="https://drive.google.com/file/d/1_7v0fc2c1iq1szdRYXJ-QMXXlC-LDF2_/view?usp=sharing" type="video/mp4" />
                         Your browser does not support the video tag.
