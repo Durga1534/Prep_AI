@@ -83,7 +83,7 @@ Prep-AI empowers users to:
 * 📑 Coding editor and syntax highlighting
 * 🧾 Save & revisit past interviews
 * ⚙️ Real-time toast and notifications
-* 
+  
 
 ## 🔧 Work In Progress
 
