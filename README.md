@@ -36,16 +36,16 @@ Prep-AI empowers users to:
 ### Homepage
 ![Homepage](client/src/assets/Homepage.png)
 
-###InterviewsPage
+### Interview
 ![Interview](client/src/assets/InterviewsPage.png)
 
-###AI-Interviews
-![AIinterview](client/src/assets/AIInterviewPage.png)
+### AI-Interviews
+![AIinterview](client/src/assets/AIinterviewPage.png)
 
-###Feedbacks
+### Feedbacks
 ![Feedback](client/src/assets/Feedbacks.png)
 
-###History
+### History
 ![History](client/src/assets/HistoryPage.png)
 
 
