@@ -273,19 +273,13 @@ git push origin feature/your-amazing-feature
 
 ---
 
-## 📄 License
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
----
-
 ## 📬 Contact & Connect
 
 **Durga Prasad** - Full Stack Developer  
 📧 **Email**: [kondurudurgaprasad.2@gmail.com](mailto:kondurudurgaprasad.2@gmail.com)  
 💼 **GitHub**: [@Durga1534](https://github.com/Durga1534)  
-🔗 **LinkedIn**: [Connect with me](https://linkedin.com/in/your-profile)  
-🌐 **Portfolio**: [View my other projects](https://your-portfolio-url.com)
+🔗 **LinkedIn**: [Connect with me](https://www.linkedin.com/in/durgaprasad23)  
+🌐 **Portfolio**: [View my other projects](https://my-portfolio-rher.vercel.app)
 
 ---
 
