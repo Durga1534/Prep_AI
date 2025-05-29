@@ -36,7 +36,18 @@ Prep-AI empowers users to:
 ### Homepage
 ![Homepage](client/src/assets/Homepage.png)
 
----
+###InterviewsPage
+![Interview](client/src/assets/InterviewsPage.png)
+
+###AI-Interviews
+![AIinterview](client/src/assets/AIInterviewPage.png)
+
+###Feedbacks
+![Feedback](client/src/assets/Feedbacks.png)
+
+###History
+![History](client/src/assets/HistoryPage.png)
+
 
 ## 🧰 Tech Stack
 
@@ -119,12 +130,12 @@ nodemon index.js
 ### Base URL
 
 ```
-http://localhost:5000/api
+http://localhost:8080/api
 ```
 
 ### Routes
 
-* `POST /auth/register` – Register a new user
+* `POST /auth/signup` – Sign UP a new user
 * `POST /auth/login` – Login and receive JWT
 * `GET /interview/:role` – Get AI-generated questions
 * `POST /interview/save` – Save user session
@@ -183,4 +194,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 * **Author**: Durga Prasad
 * **GitHub**: [Durga1534](https://github.com/Durga1534)
-* **Email**: [durgaprasadpc143@gmail.com](mailto:durgaprasadpc143@gmail.com)
+* **Email**: [kondurudurgaprasad.2@gmailcom](mailto:kondurudurgaprasad.2@gmail.com)
