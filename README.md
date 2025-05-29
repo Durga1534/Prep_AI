@@ -83,6 +83,29 @@ Prep-AI empowers users to:
 * 📑 Coding editor and syntax highlighting
 * 🧾 Save & revisit past interviews
 * ⚙️ Real-time toast and notifications
+* 
+
+## 🔧 Work In Progress
+
+These features are either completed ✅ or currently being planned/implemented 🚧 to improve the app further:
+
+- [x] **AI-Generated Questions using Gemini**  
+  Dynamically generates coding and theory questions based on role and experience
+
+- [x] **Firebase Auth + Firestore Storage**  
+  Secure user authentication and persistent data storage for user sessions and questions
+
+- [ ] **📊 Progress Dashboard with Charts**  
+  Visual analytics to track user performance, topic coverage, and improvement over time
+
+- [ ] **🧑‍💻 Code Editor for Solving Coding Questions**  
+  Integrated editor (Monaco/CodeMirror) with syntax highlighting and language mode support
+
+- [ ] **⭐ Bookmark / Star Questions**  
+  Mark questions as favorites for later review and practice
+
+- [ ] **🛠️ Admin Panel for Content Management**  
+  Admin-only interface to manage users, question sets, tags, and feedback
 
 ---
 
