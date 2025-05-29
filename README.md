@@ -62,14 +62,14 @@ Prep-AI empowers users to:
 * **Forms**: React Hook Form
 * **State & Animation**: Framer Motion, React Hot Toast, Toastify
 * **Code UI**: `@uiw/react-textarea-code-editor`, `react-syntax-highlighter`
-* **Auth & Speech**: Firebase, Speechly
+* **Auth**: Firebase
 * **Helmet**: React Helmet Async
 
 ### 🛠️ Backend (`server`)
 
 * **Runtime**: Node.js (CommonJS)
 * **Framework**: Express
-* **Security**: JWT, bcryptjs
+* **Security**: JWT
 * **AI Integration**: Google Generative AI
 * **Database**: Firebase Admin SDK
 * **Utilities**: dotenv, uuid, cors, nodemon
