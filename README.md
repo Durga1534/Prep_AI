@@ -23,7 +23,7 @@ Prep-AI is a comprehensive full-stack web application that revolutionizes interv
 - ✅ **Full-Stack Architecture**: Scalable React frontend with robust Node.js backend
 - ✅ **Production Deployment**: Successfully deployed on Vercel and Render with 99%+ uptime
 - ✅ **Secure Authentication**: Firebase-based auth system with JWT token management
-- ✅ **Real-time Code Editor**: Syntax highlighting and code execution environment
+- ✅ **Real-time Code Editor**: Syntax highlighting and code execution environment (comming soon)
 
 ---
 
