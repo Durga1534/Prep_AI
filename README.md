@@ -34,7 +34,7 @@ Prep-AI empowers users to:
 ## 📸 Screenshots
 
 ### Homepage
-![Homepage](/assets/Homepage.png)
+![Homepage](client/src/assets/Homepage.png)
 
 ---
 
