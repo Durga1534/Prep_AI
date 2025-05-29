@@ -1,25 +1,26 @@
 # 🚀 Prep-AI – Your AI-Powered Interview Preparation Companion
 
-Prep-AI is a full-stack web application designed to help candidates prepare for interviews based on selected roles. It leverages AI to generate tailored questions—both theoretical and coding—and provides a seamless and interactive user experience.
+Prep-AI is a full-stack web application designed to help candidates prepare for interviews based on selected roles. It leverages AI to generate tailored theoretical and coding questions and provides a seamless, interactive user experience.
 
-🚀[Live Demo -Frontend (Vercel)](https://prep-ai-git-master-durgaprasads-projects-e0a9901b.vercel.app/) | 🔧 [Backend (Render)](https://prep-ai-wku0.onrender.com)
-
+🌐 [Live Demo – Frontend (Vercel)](https://prep-ai-git-master-durgaprasads-projects-e0a9901b.vercel.app/)  
+🔧 [Backend (Render)](https://prep-ai-wku0.onrender.com)
 
 ---
 
 ## 📚 Table of Contents
 
-* [📝 Introduction](#introduction)
-* [📸 Screenshots](#screenshots)
-* [🧰 Tech Stack](#tech-stack)
-* [✨ Features](#features)
-* [⚙️ Installation](#installation)
-* [🚀 Usage](#usage)
-* [📡 API Documentation](#api-documentation)
-* [🔐 Environment Variables](#environment-variables)
-* [🤝 Contributing](#contributing)
-* [📄 License](#license)
-* [📬 Contact](#contact)
+- [📝 Introduction](#-introduction)
+- [📸 Screenshots](#-screenshots)
+- [🧰 Tech Stack](#-tech-stack)
+- [✨ Features](#-features)
+- [🔧 Work In Progress](#-work-in-progress)
+- [⚙️ Installation](#️-installation)
+- [🚀 Usage](#-usage)
+- [📡 API Documentation](#-api-documentation)
+- [🔐 Environment Variables](#-environment-variables)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
+- [📬 Contact](#-contact)
 
 ---
 
@@ -27,85 +28,83 @@ Prep-AI is a full-stack web application designed to help candidates prepare for 
 
 Prep-AI empowers users to:
 
-* 🎯 Select interview roles and generate personalized interview sets.
-* 🤖 Leverage AI to generate theoretical and coding questions.
-* 📁 Store interview sessions and revisit them later for revision.
-* 🔒 Secure user authentication with Firebase.
+- 🎯 Select interview roles and generate personalized question sets.
+- 🤖 Use AI (Gemini) for dynamic theoretical and coding question generation.
+- 📁 Save and revisit interview sessions.
+- 🔐 Ensure secure authentication using Firebase.
 
 ---
 
 ## 📸 Screenshots
 
-### Homepage
-![Homepage](client/src/assets/Homepage.png)
+> Replace placeholders if not loaded properly on GitHub
 
-### Interview
-![Interview](client/src/assets/InterviewsPage.png)
+| Homepage | AI Interview | Interview History |
+|---------|--------------|-------------------|
+| ![Homepage](client/src/assets/Homepage.png) | ![AIinterview](client/src/assets/AIinterviewPage.png) | ![History](client/src/assets/HistoryPage.png) |
 
-### AI-Interviews
-![AIinterview](client/src/assets/AIinterviewPage.png)
+| Interview Page | Feedback |
+|----------------|----------|
+| ![Interview](client/src/assets/InterviewsPage.png) | ![Feedback](client/src/assets/Feedbacks.png) |
 
-### Feedbacks
-![Feedback](client/src/assets/Feedbacks.png)
-
-### History
-![History](client/src/assets/HistoryPage.png)
-
+---
 
 ## 🧰 Tech Stack
 
 ### 🌐 Frontend (`client`)
 
-* **Framework**: React with Vite
-* **Styling**: Tailwind CSS
-* **Routing**: React Router DOM
-* **Forms**: React Hook Form
-* **State & Animation**: Framer Motion, React Hot Toast, Toastify
-* **Code UI**: `@uiw/react-textarea-code-editor`, `react-syntax-highlighter`
-* **Auth**: Firebase
-* **Helmet**: React Helmet Async
+- **Framework**: React + Vite
+- **Styling**: Tailwind CSS
+- **Routing**: React Router DOM
+- **Forms**: React Hook Form
+- **UI/UX**: Framer Motion, React Toastify, Hot Toast
+- **Editor & Highlighting**: `@uiw/react-textarea-code-editor`, `react-syntax-highlighter`
+- **Authentication**: Firebase Auth
+- **SEO**: React Helmet Async
 
 ### 🛠️ Backend (`server`)
 
-* **Runtime**: Node.js (CommonJS)
-* **Framework**: Express
-* **Security**: JWT
-* **AI Integration**: Google Generative AI
-* **Database**: Firebase Admin SDK
-* **Utilities**: dotenv, uuid, cors, nodemon
+- **Runtime**: Node.js
+- **Framework**: Express
+- **Security**: JWT Auth
+- **Database**: Firebase Admin SDK (Firestore)
+- **AI Integration**: Google Generative AI (Gemini)
+- **Tools**: dotenv, uuid, cors, nodemon
 
 ---
 
 ## ✨ Features
 
-* 🔐 User Authentication with Firebase
-* 🧠 Role-based AI question generation
-* 📑 Coding editor and syntax highlighting
-* 🧾 Save & revisit past interviews
-* ⚙️ Real-time toast and notifications
-  
+- 🔐 Firebase-based user authentication
+- 🎓 Role-based interview session generator
+- 🧠 AI-generated coding + theoretical questions
+- 💾 Interview session saving & revisiting
+- 📤 Instant feedback integration
+- 📋 Clean code editor with syntax highlighting
+
+---
 
 ## 🔧 Work In Progress
 
-These features are either completed ✅ or currently being planned/implemented 🚧 to improve the app further:
+Features completed ✅ and those coming soon 🚧:
 
 - [x] **AI-Generated Questions using Gemini**  
-  Dynamically generates coding and theory questions based on role and experience
+  Dynamically tailored theory + coding questions by experience and role.
 
 - [x] **Firebase Auth + Firestore Storage**  
-  Secure user authentication and persistent data storage for user sessions and questions
+  Secure login, signup, and session data storage.
 
 - [ ] **📊 Progress Dashboard with Charts**  
-  Visual analytics to track user performance, topic coverage, and improvement over time
+  Visual analytics on topics covered, sessions attempted, success rate, etc.
 
 - [ ] **🧑‍💻 Code Editor for Solving Coding Questions**  
-  Integrated editor (Monaco/CodeMirror) with syntax highlighting and language mode support
+  Advanced editor (Monaco/CodeMirror) with runtime evaluation coming soon.
 
 - [ ] **⭐ Bookmark / Star Questions**  
-  Mark questions as favorites for later review and practice
+  Save favorite questions for review later.
 
 - [ ] **🛠️ Admin Panel for Content Management**  
-  Admin-only interface to manage users, question sets, tags, and feedback
+  Manage users, feedback, and question categories via a secure admin interface.
 
 ---
 
@@ -113,16 +112,16 @@ These features are either completed ✅ or currently being planned/implemented �
 
 ### Prerequisites
 
-* Node.js (v18+)
-* Firebase project setup
-* Google Generative AI API Key
+- Node.js v18+
+- Firebase Project
+- Google Gemini API Key
 
-### 1️⃣ Clone the repository
+### Clone the repo
 
 ```bash
-git clone https://github.com/your-username/prep-ai.git
+git clone https://github.com/Durga1534/prep-ai.git
 cd prep-ai
-```
+
 
 ### 2️⃣ Setup the client
 
