@@ -37,7 +37,6 @@ Prep-AI empowers users to:
 
 ## 📸 Screenshots
 
-> Replace placeholders if not loaded properly on GitHub
 
 | Homepage | AI Interview | Interview History |
 |---------|--------------|-------------------|
