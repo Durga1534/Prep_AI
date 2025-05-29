@@ -2,6 +2,9 @@
 
 Prep-AI is a full-stack web application designed to help candidates prepare for interviews based on selected roles. It leverages AI to generate tailored questions—both theoretical and coding—and provides a seamless and interactive user experience.
 
+🚀 🌐 [Frontend (Vercel)](https://prep-ai-git-master-durgaprasads-projects-e0a9901b.vercel.app/) | 🔧 [Backend (Render)](https://prep-ai-wku0.onrender.com)
+
+
 ---
 
 ## 📚 Table of Contents
