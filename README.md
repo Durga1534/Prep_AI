@@ -33,7 +33,8 @@ Prep-AI empowers users to:
 
 ## 📸 Screenshots
 
-> *Add screenshots here for homepage, interview creation, AI question generation, etc.*
+### Homepage
+![Homepage](client/assets/Homepage.png)
 
 ---
 
