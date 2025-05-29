@@ -57,7 +57,7 @@ Prep-AI is a comprehensive full-stack web application that revolutionizes interv
 - **Framework**: Express.js with middleware architecture
 - **Authentication**: JWT tokens + Firebase Admin SDK
 - **Database**: Cloud Firestore (NoSQL, real-time)
-- **AI Integration**: Google Generative AI (Gemini Pro)
+- **AI Integration**: Google Generative AI (Gemini-1.5-flash)
 - **Security**: CORS, input validation, rate limiting
 - **Development**: Nodemon, ES6+ features
 
@@ -86,14 +86,14 @@ Prep-AI is a comprehensive full-stack web application that revolutionizes interv
 ### 💻 Interactive Coding Environment
 - Real-time syntax highlighting for multiple languages
 - Code execution and validation (coming soon)
-- Auto-save functionality for session continuity
-- Clean, distraction-free coding interface
+- Auto-save functionality for session continuity (coming soon)
+- Clean, distraction-free coding interface (coming soon)
 
 ### 📊 Session Management
 - Comprehensive interview session tracking
 - Historical performance analytics
-- Bookmark favorite questions for later review
-- Export session reports for offline study
+- Bookmark favorite questions for later review (coming soon)
+- Export session reports for offline study (coming soon)
 
 ---
 
